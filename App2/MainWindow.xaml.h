@@ -18,7 +18,7 @@ namespace winrt::App2::implementation
 
         MainWindow()
         {
-            // Xaml objects should not call InitializeComponent during construction.
+            // Xaml objects should not call InitializeComponent during construction ttt.
             // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
             this->Closed([&](auto const&, auto const&) {
                 if (settingsWindow)
