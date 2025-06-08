@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="App2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="App2">
+    
+    <Grid Background="#222831">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30">
+            
+        <TextBlock Text="Евристичні алгоритми:" FontSize="20" VerticalAlignment="Center" Margin="5,0,0,15"/>
+
+        <Button Content="Cuckoo Search" Click="OnCuckooSearchClick" Margin="5"/>
+        <Button Content="PSO" Click="OnPSOClick" Margin="5"/>
+        <Button Content="Simulated Annealing" Click="OnSimulatedAnnealingClick" Margin="5"/>
+        <Button Content="Pattern Search" Click="OnPatternSearchClick" Margin="5"/>
+        <Button Content="Firefly Algorithm" Click="OnFireflyAlgorithmClick" Margin="5"/>
+        <Button Content="Flower Polination Algorithm" Click="FlowerPolinationClick" Margin="5"/>
+        <Button Content="Gravitational search Algorithm" Click="GravitationalsearchClick" Margin="5"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="6,0,0,0">
+            <TextBlock Text="Кількість запусків (1-10):" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox x:Name="runCountBox" Text="1" Width="40" MaxLength="2" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="6,10,0,0">
+                <TextBlock Text="Обмеження по довжині:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <RadioButton x:Name="L240RadioButton" Content="L ≤ 240"
+                 GroupName="LengthGroup" IsChecked="True"
+                 Checked="OnLengthRadioChecked" Margin="0,0,10,0"/>
+            <RadioButton x:Name="L200RadioButton" Content="L ≤ 200"
+                 GroupName="LengthGroup"
+                 Checked="OnLengthRadioChecked"/>
+        </StackPanel>
+
+        <TextBox x:Name="result" Text="Результати алгоритмів з'являться тут :)"
+         TextWrapping="Wrap" Margin="0,10,15,0" Height="140" Width="400"
+         IsReadOnly="True" />
+
+
+        <Button Content="Інформація"  Click="OnInfoClick" HorizontalAlignment="Right"  Margin="0 50 5 -34"/>
+       
+        <Button Content="Експорт в Excell"  Click="Excell_Click" HorizontalAlignment="Left" Margin="5 0 0 0" />
+        <Button Content="Налаштування"  Click="OnSettingsClick" HorizontalAlignment="Center"  Margin="23 -31 0 0"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
